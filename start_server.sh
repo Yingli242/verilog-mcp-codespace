@@ -10,10 +10,4 @@
   echo "🚀 启动MCP服务器..."
   python mcp_server.py
 
-  文件5：.github/dependabot.yml（可选，保持更新）
-  version: 2
-  updates:
-    - package-ecosystem: "pip"
-      directory: "/"
-      schedule:
-        interval: "weekly"
+
