@@ -1,0 +1,1 @@
+# verilog-mcp-codespace
