@@ -1,0 +1,26 @@
+  {
+    "name": "Verilog MCP Environment",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "features": {
+      "ghcr.io/devcontainers/features/python:1": {
+        "version": "3.11"
+      },
+      "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "postCreateCommand": "sudo apt update && sudo apt install -y gcc iverilog verilator gtkwave",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "mshr-h.veriloghdl",
+          "ms-python.python"
+        ]
+      }
+    },
+    "forwardPorts": [8000],
+    "portsAttributes": {
+      "8000": {
+        "label": "MCP Server",
+        "onAutoForward": "notify"
+      }
+    }
+  }
