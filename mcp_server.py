@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+  #!/usr/bin/env python3
   """
   GitHub Codespaces MCP Server for Verilog/C Execution
   运行在端口 8000，Claude 可直接调用
@@ -81,7 +81,7 @@
 
           if compile_result.returncode != 0:
               return {
-                  "error": f"编译失败",
+                  "error": "编译失败",
                   "stderr": compile_result.stderr,
                   "stdout": compile_result.stdout
               }
