@@ -1,9 +1,14 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
   """
   GitHub Codespaces MCP Server for Verilog/C Execution
   运行在端口 8000，Claude 可直接调用
   """
-  import subprocess, tempfile, os, json, sys
+
+  import subprocess
+  import tempfile
+  import os
+  import json
+  import sys
   from fastapi import FastAPI, HTTPException
   from pydantic import BaseModel
   import uvicorn
@@ -53,18 +58,6 @@
                           }
                       },
                       "required": ["files"]
-                  }
-              },
-              {
-                  "name": "run_verilator",
-                  "description": "使用Verilator进行更高级的仿真",
-                  "inputSchema": {
-                      "type": "object",
-                      "properties": {
-                          "top_module": {"type": "string", "description": "顶层模块名"},
-                          "files": {"type": "object", "description": "Verilog文件"}
-                      },
-                      "required": ["top_module", "files"]
                   }
               }
           ]
@@ -222,7 +215,7 @@
 
   if __name__ == "__main__":
       print("🚀 GitHub Codespaces MCP 服务器启动中...")
-      print("📦 已安装工具: gcc, iverilog, verilator")
+      print("📦 已安装工具: gcc, iverilog")
       print("🌐 服务器将在 http://localhost:8000 运行")
       print("🔧 可用端点:")
       print("  GET  /health")
